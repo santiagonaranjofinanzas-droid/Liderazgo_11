@@ -41,4 +41,25 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Tab switcher for Semillero stages
+    const tabBtns = document.querySelectorAll(".tab-btn");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const targetId = btn.dataset.tab;
+            
+            // Remove active classes
+            tabBtns.forEach(b => b.classList.remove("active-tab"));
+            tabContents.forEach(c => c.classList.remove("active-content"));
+            
+            // Add active classes
+            btn.classList.add("active-tab");
+            const targetContent = document.getElementById(targetId);
+            if (targetContent) {
+                targetContent.classList.add("active-content");
+            }
+        });
+    });
 });
