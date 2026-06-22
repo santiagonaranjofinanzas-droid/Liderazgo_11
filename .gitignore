@@ -1,0 +1,7 @@
+# Ignorar archivos del deber anterior
+Deber anterior/
+act.11_liderazgo_comunitario.docx
+
+# Sistema
+.DS_Store
+Thumbs.db
